@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>shmilyvidian</title>
+  
+  
+  <link href="/atom.xml" rel="self"/>
+  
+  <link href="/shmilyvidian.site/"/>
+  <updated>2017-11-05T03:41:44.464Z</updated>
+  <id>/shmilyvidian.site/</id>
+  
+  <author>
+    <name>shmilyvidian</name>
+    
+  </author>
+  
+  <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>利用hexo+githubpage+阿里云搭建个人博客</title>
+    <link href="/shmilyvidian.site/2017/11/05/hello-world/"/>
+    <id>/shmilyvidian.site/2017/11/05/hello-world/</id>
+    <published>2017-11-05T03:07:36.275Z</published>
+    <updated>2017-11-05T03:41:44.464Z</updated>
+    
+    <content type="html"><![CDATA[<p>因为最近在想搞一个自己的博客,发现GitHub+Hexo是最好的一个选择了,折腾了很多，走了很多配置的坑, 发现网上的教程虽然有很多,但是自己一步步操作得形成自己的体系，毕竟自己的东西才是更有意义的，所以记录下来希望可以帮助其他人博客的搭建, 一是为了总结,二是为了让更多的人少走弯路,更快的搭建好自己的博客平台.</p><h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo new <span class="string">"My New Post"</span></div></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="external">Writing</a></p><h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo server</div></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="external">Server</a></p><h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo generate</div></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="external">Generating</a></p><h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo deploy</div></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="external">Deployment</a></p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;因为最近在想搞一个自己的博客,发现GitHub+Hexo是最好的一个选择了,折腾了很多，走了很多配置的坑, 发现网上的教程虽然有很多,但是自己一步步操作得形成自己的体系，毕竟自己的东西才是更有意义的，所以记录下来希望可以帮助其他人博客的搭建, 一是为了总结,二是为了让更多的
+      
+    
+    </summary>
+    
+    
+  </entry>
+  
+</feed>
