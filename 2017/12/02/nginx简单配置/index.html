@@ -3,14 +3,18 @@
 <head>
   <meta charset="utf-8">
   
-  <title>shmilyvidian</title>
+  <title>nginx简单配置 | shmilyvidian</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="shmilyvidian">
-<meta property="og:url" content="/shmilyvidian.site/index.html">
+  <meta name="description" content="nginx基本就分为以下几块： nginx配置文件主要分为六个区域：main(全局设置)、events(nginx工作模式)、http(http设置)、sever(主机设置)、location(URL匹配)、upstream(负载均衡服务器设置)。 main模块1 下面时一个main区域，他是一个全局的设置： user nobody nobody;worker_processes 2;error_">
+<meta property="og:type" content="article">
+<meta property="og:title" content="nginx简单配置">
+<meta property="og:url" content="/shmilyvidian.site/2017/12/02/nginx简单配置/index.html">
 <meta property="og:site_name" content="shmilyvidian">
+<meta property="og:description" content="nginx基本就分为以下几块： nginx配置文件主要分为六个区域：main(全局设置)、events(nginx工作模式)、http(http设置)、sever(主机设置)、location(URL匹配)、upstream(负载均衡服务器设置)。 main模块1 下面时一个main区域，他是一个全局的设置： user nobody nobody;worker_processes 2;error_">
+<meta property="og:updated_time" content="2017-12-02T15:44:59.338Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="shmilyvidian">
+<meta name="twitter:title" content="nginx简单配置">
+<meta name="twitter:description" content="nginx基本就分为以下几块： nginx配置文件主要分为六个区域：main(全局设置)、events(nginx工作模式)、http(http设置)、sever(主机设置)、location(URL匹配)、upstream(负载均衡服务器设置)。 main模块1 下面时一个main区域，他是一个全局的设置： user nobody nobody;worker_processes 2;error_">
   
     <link rel="alternate" href="/atom.xml" title="shmilyvidian" type="application/atom+xml">
   
@@ -59,9 +63,7 @@
   </div>
 </header>
       <div class="outer">
-        <section id="main">
-  
-    <article id="nginx简单配置-nginx简单配置" class="article article-type-nginx简单配置" itemscope itemprop="blogPost">
+        <section id="main"><article id="nginx简单配置-nginx简单配置" class="article article-type-nginx简单配置" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/2017/12/02/nginx简单配置/" class="article-date">
   <time datetime="2017-12-02T15:37:02.000Z" itemprop="datePublished">2017-12-02</time>
@@ -74,8 +76,8 @@
       <header class="article-header">
         
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/12/02/nginx简单配置/">nginx简单配置</a>
+    <h1 class="article-title" itemprop="name">
+      nginx简单配置
     </h1>
   
 
@@ -141,60 +143,19 @@ aerror_log  usr/local/var/log/host.error.log  error;
     </footer>
   </div>
   
-</article>
-
-
+    
+<nav id="article-nav">
   
-    <article id="post-hello-world" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2017/11/05/hello-world/" class="article-date">
-  <time datetime="2017-11-05T03:07:36.275Z" itemprop="datePublished">2017-11-05</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/11/05/hello-world/">利用hexo+githubpage+阿里云搭建个人博客</a>
-    </h1>
+    <a href="/2017/11/05/hello-world/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">利用hexo+githubpage+阿里云搭建个人博客</div>
+    </a>
   
+</nav>
 
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>因为最近在想搞一个自己的博客,发现GitHub+Hexo是最好的一个选择了,折腾了很多，走了很多配置的坑, 发现网上的教程虽然有很多,但是自己一步步操作得形成自己的体系，毕竟自己的东西才是更有意义的，所以记录下来希望可以帮助其他人博客的搭建, 一是为了总结,二是为了让更多的人少走弯路,更快的搭建好自己的博客平台.<br><br><img src="/11/05/hello-world/../images/timig.jpg" alt="hexo"></p>
-<h2 id="准备"><a href="#准备" class="headerlink" title="准备"></a>准备</h2><p>–<br>默认你是github注册用户,电脑已安装node,git</p>
-<h3 id="Hexo"><a href="#Hexo" class="headerlink" title="Hexo"></a>Hexo</h3><p>–<br>Hexo是一个基于Node.js的快速简单的静态博客框架<br>    安装方法:npm install -g hexo</p>
-<h3 id="初始化hexo"><a href="#初始化hexo" class="headerlink" title="初始化hexo"></a>初始化hexo</h3><p>–<br>在你新建的博客文件夹中,一开始即当前文件夹为空的前提执行hexo init floder_name<br>然后cd floder_name执行npm i</p>
-<h3 id="hexo基础命令"><a href="#hexo基础命令" class="headerlink" title="hexo基础命令"></a>hexo基础命令</h3><p>–<br>hexo clean<br>hexo g<br>hexo d<br>hexo server -p [prot]</p>
-<h3 id="部署到github"><a href="#部署到github" class="headerlink" title="部署到github"></a>部署到github</h3><p>–<br>配置_config.yml文件</p>
-<h1 id="Deployment"><a href="#Deployment" class="headerlink" title="Deployment"></a>Deployment</h1><pre><code>## Docs: http://hexo.io/docs/deployment.html
-deploy:
-    type: github
-    repository: https://github.com/用户名/用户名.github.io.git
-    branch: master
-</code></pre><h2 id="域名解析"><a href="#域名解析" class="headerlink" title="###域名解析"></a>###域名解析</h2><p>阿里云购买域名域名解析两种方式<br>1.添加CNAME,活动记录填你github的ip地址   (ping username.github.io)<br>2.添加a,活动记录填你gitHub仓库地址</p>
-<p>###主题更换<br>– hexo官网主题选择你喜欢的主题后去往github地址下载下来放在不博客地址的themes文件夹中,然后在博客配置文件_config.yml更改theme: your_download_theme_name,其他如需配置根据主题提供者的文档修改即可</p>
-<p>###其他<br>1.每次修改后执行了hexo d都会清除CNAME文件,解决方法你在github你的博客仓库setting手动添加custom domain,或者新建CNAME文件然后写入你的域名地址<br>2.hexo中文地址：<a href="https://hexo.io/zh-cn/docs/" target="_blank" rel="external">https://hexo.io/zh-cn/docs/</a></p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="/shmilyvidian.site/2017/11/05/hello-world/" data-id="cjapigosi00002g1dqacvwxz1" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
   
 </article>
-
-
-  
 
 </section>
         
