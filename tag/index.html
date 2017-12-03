@@ -102,26 +102,190 @@
 </nav>
 
         <div id="main" >
-            <div class ="post_page_title_img" style="height: 25rem;background-image: url(../../images/timg.jpg    略缩图);background-position: center; background-repeat:no-repeat; background-size:cover;-moz-background-size:cover;overflow:hidden;" >
-                <a href="#" style="padding: 4rem 4rem 2rem 4rem ;"><h2 >利用hexo+githubpage+阿里云搭建个人博客</h2></a>
+            <div class ="post_page_title_img" style="height: 25rem;background-image: url();background-position: center; background-repeat:no-repeat; background-size:cover;-moz-background-size:cover;overflow:hidden;" >
+                <a href="#" style="padding: 4rem 4rem 2rem 4rem ;"><h2 ></h2></a>
             </div>
             <!-- Post -->
             <div class="typo" style="padding: 3rem;">
-                <h2 id="title-利用hexo-githubpage-阿里云搭建个人博客"><a href="#title-利用hexo-githubpage-阿里云搭建个人博客" class="headerlink" title="title: 利用hexo+githubpage+阿里云搭建个人博客"></a>title: 利用hexo+githubpage+阿里云搭建个人博客</h2><p>因为最近在想搞一个自己的博客,发现GitHub+Hexo是最好的一个选择了,折腾了很多，走了很多配置的坑, 发现网上的教程虽然有很多,但是自己一步步操作得形成自己的体系，毕竟自己的东西才是更有意义的，所以记录下来希望可以帮助其他人博客的搭建, 一是为了总结,二是为了让更多的人少走弯路,更快的搭建好自己的博客平台.<br><br><img src="/11/05/hello-world/../images/timig.jpg" alt="hexo"></p>
-<h2 id="准备"><a href="#准备" class="headerlink" title="准备"></a>准备</h2><p>–<br>默认你是github注册用户,电脑已安装node,git</p>
-<h3 id="Hexo"><a href="#Hexo" class="headerlink" title="Hexo"></a>Hexo</h3><p>–<br>Hexo是一个基于Node.js的快速简单的静态博客框架<br>    安装方法:npm install -g hexo</p>
-<h3 id="初始化hexo"><a href="#初始化hexo" class="headerlink" title="初始化hexo"></a>初始化hexo</h3><p>–<br>在你新建的博客文件夹中,一开始即当前文件夹为空的前提执行hexo init floder_name<br>然后cd floder_name执行npm i</p>
-<h3 id="hexo基础命令"><a href="#hexo基础命令" class="headerlink" title="hexo基础命令"></a>hexo基础命令</h3><p>–<br>hexo clean<br>hexo g<br>hexo d<br>hexo server -p [prot]</p>
-<h3 id="部署到github"><a href="#部署到github" class="headerlink" title="部署到github"></a>部署到github</h3><p>–<br>配置_config.yml文件</p>
-<h1 id="Deployment"><a href="#Deployment" class="headerlink" title="Deployment"></a>Deployment</h1><pre><code>## Docs: http://hexo.io/docs/deployment.html
-deploy:
-    type: github
-    repository: https://github.com/用户名/用户名.github.io.git
-    branch: master
-</code></pre><h2 id="域名解析"><a href="#域名解析" class="headerlink" title="###域名解析"></a>###域名解析</h2><p>阿里云购买域名域名解析两种方式<br>1.添加CNAME,活动记录填你github的ip地址   (ping username.github.io)<br>2.添加a,活动记录填你gitHub仓库地址</p>
-<p>###主题更换<br>– hexo官网主题选择你喜欢的主题后去往github地址下载下来放在不博客地址的themes文件夹中,然后在博客配置文件_config.yml更改theme: your_download_theme_name,其他如需配置根据主题提供者的文档修改即可</p>
-<p>###其他<br>1.每次修改后执行了hexo d都会清除CNAME文件,解决方法你在github你的博客仓库setting手动添加custom domain,或者新建CNAME文件然后写入你的域名地址<br>2.hexo中文地址：<a href="https://hexo.io/zh-cn/docs/" target="_blank" rel="external">https://hexo.io/zh-cn/docs/</a></p>
+                <!DOCTYPE HTML>
+<html>
 
+<head>
+    <link rel="bookmark" type="image/x-icon" href="/img/logo_miccall.png">
+    <link rel="shortcut icon" href="/img/logo_miccall.png">
+
+
+    <title>
+        SHMILYVIDIAN
+    </title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <link rel="stylesheet" href="/css/mic_main.css">
+    <link rel="stylesheet" href="/css/dropdownMenu.css">
+
+    <script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+    <noscript>
+        <link rel="stylesheet" href="/css/noscript.css">
+    </noscript>
+
+    <script src="/js/jquery.min.js"></script>
+    <script src="/js/jquery.scrollex.min.js"></script>
+    <script src="/js/jquery.scrolly.min.js"></script>
+    <script src="/js/skel.min.js"></script>
+    <script src="/js/util.js"></script>
+    <script src="/js/main.js"></script>
+
+    <link rel="stylesheet" href="/css/prism-coy.css" type="text/css">
+    <link rel="stylesheet" href="/css/prism-line-numbers.css" type="text/css">
+</head>
+
+
+<!-- Layouts -->
+
+<!-- Tags Cloud -->
+
+<link rel="stylesheet" href="/css/item.css">
+<style>
+    .row a {
+        border-bottom: none;
+    }
+
+    .special {
+        padding: 0;
+        padding: 2rem;
+    }
+</style>
+
+<body class="is-loading">
+    <!-- Wrapper 外包 s-->
+    <div id="wrapper" class="fade-in">
+        <!-- Intro 头部显示 s -->
+        <!-- Intro 头部显示 e -->
+        <!-- Header 头部logo start -->
+        <header id="header">
+            <a href="/" class="logo">MICCALL</a>
+        </header>
+        <!-- Nav 导航条 start -->
+        <nav id="nav" class="special">
+            <ul class="menu links">
+                <!-- Homepage  主页  -->
+                <li>
+                    <a href="/" rel="nofollow">主页</a>
+                </li>
+                <!-- categories_name  分类   -->
+
+                <li class="active">
+                    <a href="#s1">分类</a>
+                    <ul class="submenu">
+                        <li>
+                            <a class="category-link" href="/categories/Algorithm/">Algorithm</a>
+                        </li>
+                        <li>
+                            <a class="category-link" href="/categories/Design/">Design</a>
+                        </li>
+                        <li>
+                            <a class="category-link" href="/categories/Unity-3D/">Unity 3D</a>
+                    </li></ul>
+                    </li>
+
+                    <!-- archives  归档   -->
+
+
+                    <!-- Pages 自定义   -->
+
+                    <li>
+                        <a href="/about/" title="简历">
+                            简历
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="/group/" title="团队">
+                            团队
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="/gallery/" title="图库">
+                            图库
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="/tag/" title="标签">
+                            标签
+                        </a>
+                    </li>
+
+
+
+            </ul>
+            <!-- icons 图标   -->
+            <ul class="icons">
+
+                <li>
+                    <a href="https://github.com/shmilyvidian" class="icon fa-github" target="_blank" rel="external">
+                        <span class="label">GitHub</span>
+                    </a>
+                </li>
+
+
+
+
+            </ul>
+        </nav>
+        <div id="main">
+            <!-- Main first s-->
+            <article id="me" class="panel">
+                <header>
+                    <h1>SHMILYVIDIAN</h1>
+                    <p>Welcome to my Blog</p>
+                </header>
+                <a href="" class="jumplink pic">
+                    <span class="arrow icon fa-chevron-right">
+                        <span></span>
+                    </span>
+                    <img src="/images/me.jpg" alt="">
+                </a>
+            </article>
+            <!-- Main first e-->
+        </div>
+
+        <section class="special">
+            <div class="row" style="border-bottom: none;">
+
+                <a href="/tags/Algorithm/" style="font-size: 16.67px;">Algorithm</a>
+                <a href="/tags/HTML/" style="font-size: 16px;">HTML</a>
+                <a href="/tags/JAVASCRIPT/" style="font-size: 16px;">JAVASCRIPT</a>
+                <a href="/tags/PPT/" style="font-size: 16px;">PPT</a>
+                <a href="/tags/REACTJS/" style="font-size: 16.33px;">REACTJS</a>
+                <a href="/tags/ANGULARJS/" style="font-size: 16px;">angularJS</a>
+                <a href="/tags/HTTP/" style="font-size: 16px;">HTTP</a>
+
+            </div>
+
+        </section>
+
+        <!-- Copyright 版权 start -->
+        <div id="copyright">
+            <ul>
+                =
+                <li>Design:
+                    <a href="http://miccall.tech " style="border-bottom: none;" target="_blank" rel="external">shmilyvidian</a>
+                </li>
+            </ul>
+
+            <span id="busuanzi_container_site_pv">2017总访问量
+                <span id="busuanzi_value_site_pv"></span>次</span>
+
+        </div>
+    </div>
+</body>
+
+
+
+</html>
             </div>
 
             <!-- Post Comments -->
@@ -183,8 +347,8 @@ $('.btn_click_load').click(function() {
 -->
 <script type="text/javascript">
     var disqus_config = function () {
-        this.page.url = '/shmilyvidian.site/2017/11/05/hello-world/';  // Replace PAGE_URL with your page's canonical URL variable
-        this.page.identifier = '/shmilyvidian.site/2017/11/05/hello-world/'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+        this.page.url = '/shmilyvidian.site/tag/index.html';  // Replace PAGE_URL with your page's canonical URL variable
+        this.page.identifier = '/shmilyvidian.site/tag/index.html'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
     };
 </script>
 
