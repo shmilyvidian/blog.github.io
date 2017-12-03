@@ -110,17 +110,20 @@
             <!-- Post -->
             <div class="typo" style="padding: 3rem;">
                 <p><img src="/12/03/singleton/images/single.jpg" alt=""></p>
-<h1 id="JAVASCRIPT设计模式之单例模式"><a href="#JAVASCRIPT设计模式之单例模式" class="headerlink" title="JAVASCRIPT设计模式之单例模式"></a>JAVASCRIPT设计模式之单例模式</h1><h2 id="基本概念"><a href="#基本概念" class="headerlink" title="基本概念"></a>基本概念</h2><pre><code>单例模式又称单体模式，是只允许实例化一次的对象类，并提供一个全局的访问点。合适应用javascript设计模式可以使我们的代码逻辑更加清晰，并且更加易于维护和重构
+<h1 id="JAVASCRIPT设计模式之单例模式"><a href="#JAVASCRIPT设计模式之单例模式" class="headerlink" title="JAVASCRIPT设计模式之单例模式"></a>JAVASCRIPT设计模式之单例模式</h1><h2 id="基本概念"><a href="#基本概念" class="headerlink" title="基本概念"></a>基本概念</h2><pre><code>单例模式又称单体模式，是只允许实例化一次的对象类，并提供一个全局的访问点。合适应用javascript设计模式可以使我们的代码逻辑更加清晰，
+并且更加易于维护和重构
 
 我们经常在为一个需求定义很多基础方法，如下：
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">function getId (id) &#123;</div><div class="line">    return document.getElementById(id)</div><div class="line">&#125;</div><div class="line"></div><div class="line">function getCss (id, key, value) &#123;</div><div class="line">    getId(id).style[key] = value</div><div class="line">&#125;</div><div class="line"></div><div class="line">function on (id, type, fn) &#123;</div><div class="line">    getId(id)[&apos;on&apos; + type] = fn</div><div class="line">&#125;</div></pre></td></tr></table></figure>
 
-这样做明显不妥的就是命名冲突， 日后其他同事为新需求增加代码或者引入某个库，导致当前的方法被冲突重写了的问题。这种时候单例模式就可以大显身手了。
+这样做明显不妥的就是命名冲突， 日后其他同事为新需求增加代码或者引入某个库，导致当前的方法被冲突重写了的问题。
+这种时候单例模式就可以大显身手了。
 </code></pre><h2 id="单例模式管理命名空间"><a href="#单例模式管理命名空间" class="headerlink" title="单例模式管理命名空间"></a>单例模式管理命名空间</h2><pre><code>单例模式为我们提供一个命名空间，让我们的代码更易维护和重构，解决变量冲突问题。比如jQuery库为我们提供了一个命名空间jQuery。
  <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line">var Li = &#123;</div><div class="line">    getId: function (id)&#123;</div><div class="line">        return document.getElementById(id)</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    getCss: function (id, key, value)&#123;</div><div class="line">        getId(id).style[key] = value</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    on: function on(id, type, fn)&#123;</div><div class="line">        getId(id)[&apos;on&apos; + type] = fn</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
 
 这样虽然可能存在人家也命名了一个Li的对象导致冲突，但是这种冲突毕竟比概率比之前就低很多了，只要大家约定俗成遵守规范就可以避免。
-</code></pre><h2 id="模块和使用"><a href="#模块和使用" class="headerlink" title="模块和使用"></a>模块和使用</h2><pre><code>单例模式通过定义命名空间可以避免变量冲突之外还可以模块化你的代码。比如我新建dom对象放入Li中，关于dom的方法我就放入dom模块，工具方法新建一个对象util放入Li中。之后调用各模块的方法就可以这样。
+</code></pre><h2 id="模块和使用"><a href="#模块和使用" class="headerlink" title="模块和使用"></a>模块和使用</h2><pre><code>单例模式通过定义命名空间可以避免变量冲突之外还可以模块化你的代码。
+比如我新建dom对象放入Li中，关于dom的方法我就放入dom模块，工具方法新建一个对象util放入Li中。之后调用各模块的方法就可以这样。
 - Li.dom.addClass
 - Li.util.trim
 每次你新建类似的方法你就知道放入对应的模块，调用的时候从对应的模块取出即可，映射关系分明，模块分明的效果一目了然。
