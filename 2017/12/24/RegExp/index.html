@@ -204,22 +204,39 @@
 <li>\W  非字母数字下划线 word<h1 id="11、边界"><a href="#11、边界" class="headerlink" title="11、边界"></a>11、边界</h1></li>
 </ul>
 </li>
-<li><p>正则表达式提供了几种常见的边界匹配字符</p>
-<ul>
-<li><p>字符 - 含义 </p>
-<ul>
+<li>正则表达式提供了几种常见的边界匹配字符<ul>
+<li>字符 - 含义 <ul>
 <li>^    以什么开始</li>
 <li>$    以什么结束</li>
 <li>\b   单词边界</li>
-<li>\B   非单词边界 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div></pre></td><td class="code"><pre><div class="line">	var string = &apos;this is a boy, this is a girl&apos;;</div><div class="line">    	string = string.replace(/\bis\b/g, &apos;my&apos;)</div><div class="line">    	console.log(string); ==&gt; this my a boy, this my a girl</div><div class="line">```  </div><div class="line"># 12、 量词</div><div class="line">- 量词是正则中的限定符。</div><div class="line">	* ‘*’	重复零次或更多次</div><div class="line">	* ‘+’	重复一次或更多次</div><div class="line">	* ‘?’	重复零次或一次</div><div class="line">	* &#123;n&#125; 重复n次</div><div class="line">	* &#123;n,&#125;	重复n次或更多次</div><div class="line">	* &#123;n,m&#125;	重复n到m次</div><div class="line">- 懒惰限定符</div><div class="line">	* &quot;*?&quot;   重复任意次，但尽可能少重复 </div><div class="line">	* &quot;+?&quot;   重复1次或更多次，但尽可能少重复</div><div class="line">	* &quot;??&quot;   重复0次或1次，但尽可能少重复</div><div class="line">	*  &quot;&#123;n,m&#125;?&quot;  重复n到m次，但尽可能少重复</div><div class="line">	* &quot;&#123;n,&#125;?&quot;    重复n次以上，但尽可能少重复</div><div class="line"># 13、贪婪模式和非贪婪模式</div></pre></td></tr></table></figure>
-</li>
-</ul>
-<p>var str = ‘123456789’;<br>str.replace(/\d{1,3}/g,’A’);  ==&gt; AAA</p>
-</li>
+<li>\B   非单词边界 </li>
 </ul>
 </li>
 </ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">```</div><div class="line">	var str = &apos;123456789&apos;;</div><div class="line">	console.log(str.replace(/\d&#123;1,3&#125;?/g,&apos;A&apos;)) ==&gt; AAAAAAAAA</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">var string = &apos;this is a boy, this is a girl&apos;;</div><div class="line">   	string = string.replace(/\bis\b/g, &apos;my&apos;)</div><div class="line">   	console.log(string); ==&gt; this my a boy, this my a girl</div></pre></td></tr></table></figure>
+<h1 id="12、-量词"><a href="#12、-量词" class="headerlink" title="12、 量词"></a>12、 量词</h1><ul>
+<li>量词是正则中的限定符。<ul>
+<li>‘*’    重复零次或更多次</li>
+<li>‘+’    重复一次或更多次</li>
+<li>‘?’    重复零次或一次</li>
+<li>{n} 重复n次</li>
+<li>{n,}    重复n次或更多次</li>
+<li>{n,m}    重复n到m次</li>
+</ul>
+</li>
+<li>懒惰限定符<ul>
+<li>“*?”   重复任意次，但尽可能少重复 </li>
+<li>“+?”   重复1次或更多次，但尽可能少重复</li>
+<li>“??”   重复0次或1次，但尽可能少重复</li>
+<li>“{n,m}?”  重复n到m次，但尽可能少重复</li>
+<li>“{n,}?”    重复n次以上，但尽可能少重复</li>
+</ul>
+</li>
+</ul>
+<h1 id="13、贪婪模式和非贪婪模式"><a href="#13、贪婪模式和非贪婪模式" class="headerlink" title="13、贪婪模式和非贪婪模式"></a>13、贪婪模式和非贪婪模式</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">var str = &apos;123456789&apos;;</div><div class="line">str.replace(/\d&#123;1,3&#125;/g,&apos;A&apos;);  ==&gt; AAA</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">var str = &apos;123456789&apos;;</div><div class="line">console.log(str.replace(/\d&#123;1,3&#125;?/g,&apos;A&apos;)) ==&gt; AAAAAAAAA</div></pre></td></tr></table></figure>
 <h1 id="14、分组、反向引用、忽略分组"><a href="#14、分组、反向引用、忽略分组" class="headerlink" title="14、分组、反向引用、忽略分组"></a>14、分组、反向引用、忽略分组</h1><ul>
 <li><p>使用括号()可以达到分组的功能，使量词作用于分组而不是作用于它最近的字符作用是分组引用和改变优先级。</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">2018-01-03 ==&gt; 2018年01月03日</div><div class="line">var reg = /(\d&#123;4&#125;)-(\d&#123;2&#125;)-(\d&#123;2&#125;)/;</div><div class="line">&apos;2018-01-03&apos;.replace(reg,&apos;$1年$2月$3日&apos;) ==&gt; 2018年01月03日</div></pre></td></tr></table></figure>
