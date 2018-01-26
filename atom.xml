@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="/shmilyvidian.site/"/>
-  <updated>2018-01-26T16:46:45.203Z</updated>
+  <updated>2018-01-26T16:51:35.738Z</updated>
   <id>/shmilyvidian.site/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="/shmilyvidian.site/2018/01/27/%E6%95%B0%E7%BB%84%E5%8E%BB%E9%87%8D/"/>
     <id>/shmilyvidian.site/2018/01/27/数组去重/</id>
     <published>2018-01-26T16:23:20.000Z</published>
-    <updated>2018-01-26T16:46:45.203Z</updated>
+    <updated>2018-01-26T16:51:35.738Z</updated>
     
     <content type="html"><![CDATA[<p>//数组去重方法汇总<br>var arr = [1,2,3,4,3,2,3,3,4,5];</p><p>//1.利用es6新特性Set值不会重复的特性去重然后用Array.from转成数组<br>console.log(Array.from(new Set(arr)))</p><p>//2.利用对象key是唯一的特性去重<br>//将数组转成对象<br>function convertObj(arr){<br>  var obj = {};<br>  if(arr instanceof Array){<br>    for(var i=0,len=arr.length;i&lt;len;i++){<br>      obj[arr[i]] = true<br>    }<br>  }<br>  return obj;<br>}</p><p>//将对象转成数组<br>function convertArr(obj){<br>  var arr = [];<br>  for(item in obj){<br>    if(obj.hasOwnProperty(item)){<br>      arr.push(item)<br>    }<br>  }<br>  return arr<br>}<br>function uniq(arr){<br>  return convertArr(convertObj(arr))<br>}<br>console.log(uniq(arr))</p><p>//3.利用indexOf找到第一项即停止的特性过滤重复项<br>function uniq(arr){<br>  var newArr = [];<br>  for(var i = 0,len=arr.length;i&lt;len;i++){<br>    if(newArr.indexOf(arr[i])==-1){<br>      newArr.push(arr[i])<br>    }<br>  }<br>  return newArr<br>}<br>console.log(uniq(arr))</p><p>//4.利用filter循环加上indexOf找到第一项即停止的特性过滤重复项<br>function uniq(arr){<br>  return Array.prototype.filter.call(arr,function(item,idx){return arr.indexOf(item) == idx})<br>}<br>console.log(uniq(arr))</p><p>//5.<br>function unique(arr) {<br>  var obj = {};<br>  return array.filter(function(item, index, array){<br>    return obj.hasOwnProperty(item) ? false : (obj[item] = true)<br>  })<br>}<br>console.log(unique(arr));</p><p>//6.<br>function unique(a) {<br>  var res = [];<br>  for (var i = 0, len = a.length; i &lt; len; i++) {<br>    for (var j = i + 1; j &lt; len; j++) {<br>      if (a[i] === a[j])<br>        j = ++i;<br>    }<br>    res.push(a[i]);<br>  }<br>  return res;<br>}<br>console.log(unique(arr)); // [1, 2]</p><p>//7.<br>function uniq(arr){<br>  var sortArr = Array.prototype.sort.call(arr);<br>  console.log(sortArr)<br>  var result = [];<br>   sortArr.reduce((v1,v2)=&gt;{<br>     if(v1 !== v2){<br>       result.push(v1)<br>     }<br>     return v2<br>   })<br>   result.push(sortArr[sortArr.length - 1]);<br>  return result;<br>}<br>console.log(uniq(arr))</p>]]></content>
     
