@@ -271,7 +271,7 @@
 <li><p>字符串中的match方法-&gt;把所有和正则匹配的字符都获取到</p>
 <p>  var reg = /\d+?/g;<br>  var str = “zhu2015an2016zhu2017”;<br>  var ary = str.match(reg);<br>  console.log(ary);</p>
 </li>
-<li><p>match的缺点：虽然在当前的情况下match比我们的exec更加的简便一些,但是match中存在一些自己处理不了的问题:在分组捕获的情况下,match只能捕获到大正则匹配的内容,而对于小正则捕获的内容是无法获取的;</p>
+<li><p>match比exec更加的简便一些,但是match中在分组捕获的情况下,match只能捕获到大正则匹配的内容,而对于小正则捕获的内容是无法获取的;</p>
 </li>
 </ul>
 
